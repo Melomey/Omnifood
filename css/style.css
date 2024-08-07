@@ -83,9 +83,15 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
   align-items: center;
-  padding: 9.6rem 0;
+  /* padding: 9.6rem 0; */
 }
+
+/* .hero-text-box {
+  margin: 0;
+  padding: 0;
+} */
 
 .heading-primary {
   font-size: 5.2rem;
@@ -107,10 +113,14 @@ body {
   display: inline-block;
 
   font-size: 2rem;
+  font-weight: 600;
   text-decoration: none;
 
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  /* put transition on original sate */
+  transition: all 0ms;
 }
 
 .btn--full:link,
@@ -121,14 +131,61 @@ body {
 
 .btn--full:hover,
 .btn--full:active {
-  color: #333;
+  background-color: #cf711f;
 }
 
-.btn--outline:link,
-.btn--outline:visited {
+.btn-outline:link,
+.btn-outline:visited {
   background-color: #fff;
+  color: #555;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+
+  /* border: 3px solid white; */
+  /* trick to add border inside */
+  box-shadow: inset 000 3px #fff;
 }
 
 .hero-img {
   width: 100%;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
